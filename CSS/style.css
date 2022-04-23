@@ -170,7 +170,9 @@ body {
   color: #333;
 }
 
-.icon-mobile-nav
+.icon-mobile-nav[name="close"] {
+  display: none;
+}
 
 /* HERO SECTİON */
 
