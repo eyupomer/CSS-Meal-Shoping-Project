@@ -125,11 +125,12 @@
         left: 0;
         width: 100%;
         height: 100vh;
+        transform: translateX(100%);
 
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: all 0.5s;
+        transition: all 0.5s ease-in;
 
         opacity: 0;
 
@@ -142,6 +143,7 @@
         opacity: 1;
         pointer-events: auto;
         visibility: visible;
+        transform: translateX(0);
     }
 
     .nav-open .icon-mobile-nav[name="close"] {
@@ -164,5 +166,42 @@
     .main-nav-list:link,
     .main-nav-list:visited {
         font-size: 3rem;
+    }
+}
+
+/* BELOW 704px (Smaller tablets) */
+
+@media(max-width: 44em) {
+    .grid--3-cols,
+    .grid--4-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .diets {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+
+    .heading-secondary {
+        margin-bottom: 4.8rem;
+    }
+
+    .pricing-plan {
+        width: 100%;
+    }
+
+    .grid--footer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .logo-col,
+    .address-col {
+        grid-column: span 3;
+    }
+
+    .nav-col {
+        grid-row: 1;
+        grid-column: span 2;
+        margin-bottom: 3.2rem;
     }
 }
